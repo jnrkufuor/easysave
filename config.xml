@@ -117,6 +117,8 @@
   <plugin name="cordova-plugin-contacts"/>
   <plugin name="cordova-plugin-geolocation" />
 -->
+<!--
   <plugin name="cordova-plugin-firebase" spec="0.1.20" />
   <gap:plugin name="com.adobe.plugins.pushplugin" />
+-->
 </widget>
