@@ -3,7 +3,7 @@
   <name>EasySave</name>
   <description>EasySave</description>
   <author href="" email="jaycuffs@gmail.com">Kasanoma </author>
-  <content src="push.html" />
+  <content src="index.html" />
   <access origin="*" />
   <vs:features />
   <preference name="SplashScreen" value="screen" />
