@@ -51,8 +51,9 @@ Buttons
  color:white;
  text-transform: uppercase; 
  text-align: center;
- box-shadow: 0 -0.3px 4px rgba(0, 0, 0, .25);
+ box-shadow: 0 -0.3px 4px rgba(0, 0, 0, .4);
 }
+
 
 .login-btn, .signup-btn{
  vertical-align: middle;
@@ -65,13 +66,14 @@ Buttons
  text-align: center;
  padding: 3vw;
  margin-top:1vw;
+
  border: 1px solid;
  border-width: 0;
  outline: none;
  border-color: white;
  border-radius: 2vw;
  text-align:center;
- width: 45%;
+ width: 35%;
  box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
 }
 
@@ -101,6 +103,11 @@ Divs/ Panels
  text-align: center;
 }
 
+.logo
+{
+ text-align: center;
+ 
+}
 .signup-panel{
  background-color:  #ff9933;
  width:100%;
@@ -144,23 +151,33 @@ Divs/ Panels
  text-align: center;
 }
 
-.hide-signup
+.signup-form
 {
  display: none;
 }
 
 .user-type-panel{
- display: inline-block;
- height:45%;
+ display: none;
+ height:50%;
  width: 80%;
  background-color: white;
  color: #ff9933;
- box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+ line-height: 20px;
+ border:1px solid;
+ border-width: 0;
+ outline: none;
+ border-color: white;
+ border-radius: 2vw;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
-.user-type{
-
- 
+.img-holder{
+ display: inline-block;
+ height: 35%;
+ width: 35%;
+ margin-top: 2vw;
+ padding: 4vw;
+ opacity: 0.8;
 }
 /*
 ----------------------------
@@ -170,6 +187,7 @@ Input
 input{
  margin-top:2vw; 
  width:80%;
+ font-size: 3.5vw;
  padding: 3vw;
  border: 1px solid;
  border-color:  #ff9933;
@@ -193,6 +211,15 @@ p{
  text-transform: capitalize;
 }
 
+.subtext{
+ color: grey;
+ display: block;
+ text-transform: capitalize;
+ padding: 3vw;
+}
+.s-text{
+ margin-top: 4vw;
+}
 
 /*
 ----------------------------
@@ -201,23 +228,23 @@ Placeholders
 */
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
  color:  #ffbf80;
- font-size:3vw;
+ font-size:3.5vw;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
- font-size:3vw;
+ font-size:3.5vw;
  color:   #ffbf80;
  opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
- font-size:3vw;
+ font-size:3.5vw;
  color:    #ffbf80;
  opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
- font-size:3vw;
+ font-size:3.5vw;
  color:    #ffbf80;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
- font-size:3vw;
+ font-size:3.5vw;
  color:    #ffbf80;
 }

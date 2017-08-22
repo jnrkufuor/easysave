@@ -13,15 +13,39 @@ $(".panel-hide").click(function(){
 });
 
 $(".signup-btn").click(function(){
+
     $(".signup-panel").slideToggle();
-    $(".login-panel").fadeOut();
+    $(".login-panel").slideToggle();
+    $(".user-type-panel").fadeIn(800);
+    $(".user-type-panel").css("display","inline-block");
     $(".sign-fa").removeClass("fa-chevron-up");
+    $(".sign-fa").removeClass("fa-chevron-left");
     $(".sign-fa").addClass("fa-chevron-down");
 });
 
 $(".signup-panel-hide").click(function(){
-   $(".signup-panel").slideToggle();
+    $(".user-type-panel").fadeOut(300);
+    $(".signup-panel").slideToggle();
     $(".login-panel").slideToggle();
-    $(".sign-fa").removeClass("fa-chevron-down");
-    $(".sign-fa").addClass("fa-chevron-up");
+     $(".signup-form").fadeOut(100);
+    $(".sign-fa").removeClass("fa-chevron-up");
+    $(".sign-fa").removeClass("fa-chevron-left");
+    $(".sign-fa").addClass("fa-chevron-down");
 });
+
+$(".type-merchant").click(function(){
+    $(".user-type-panel").hide();
+    $(".signup-form").fadeIn(600);
+    $(".sign-fa").removeClass("fa-chevron-down");
+    $(".sign-fa").addClass("fa-chevron-left");
+
+});
+
+$(".type-customer").click(function(){
+    $(".user-type-panel").hide();
+    $(".signup-form").fadeIn(600);
+    $(".sign-fa").removeClass("fa-chevron-down");
+    $(".sign-fa").addClass("fa-chevron-left");
+
+});
+
