@@ -1,0 +1,223 @@
+/*Easysave custom css*/
+/*Overwrite Uikit css*/
+/*Author: Noma Dev*/
+
+/*
+----------------------------
+Font Families
+----------------------------
+*/
+@font-face{
+ font-family:encode;
+ src: url(../fonts/encode.ttf);
+}
+
+
+
+/*
+----------------------------
+Animation
+----------------------------
+
+
+
+/*
+----------------------------
+Body 
+----------------------------
+*/
+html
+{
+ background: url(../images/01.png) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ font-family: encode!important;
+}
+
+
+/*
+----------------------------
+Buttons
+----------------------------
+*/
+.login-pop{
+ display: table-cell;
+ vertical-align: middle;
+ background-color:  #ff9933;
+ font-size:4vw;
+ font-weight: 500;
+ color:white;
+ text-transform: uppercase; 
+ text-align: center;
+ box-shadow: 0 -0.3px 4px rgba(0, 0, 0, .25);
+}
+
+.login-btn, .signup-btn{
+ vertical-align: middle;
+ font-size:4vw;
+ display:inline-block;
+ line-height: normal;
+ font-weight: 500;
+ color:white!important;
+ text-transform: uppercase; 
+ text-align: center;
+ padding: 3vw;
+ margin-top:1vw;
+ border: 1px solid;
+ border-width: 0;
+ outline: none;
+ border-color: white;
+ border-radius: 2vw;
+ text-align:center;
+ width: 45%;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+}
+
+.signup-btn{
+ color :#ff9933!important;
+ background-color:white; 
+}
+
+
+/*
+----------------------------
+Divs/ Panels
+----------------------------
+*/
+
+.login-panel{
+ background-color:  #ff9933;
+ width:100%;
+ height:67%;
+ display: none;
+ line-height: 55px;
+ font-weight: 500;
+ position: fixed;
+ bottom: 0;
+ color:white;
+ text-transform: uppercase; 
+ text-align: center;
+}
+
+.signup-panel{
+ background-color:  #ff9933;
+ width:100%;
+ height:90%;
+ display: none;
+ line-height: 55px;
+ font-weight: 500;
+ position: fixed;
+ bottom: 0;
+ color:white;
+ text-transform: uppercase; 
+ text-align: center;
+}
+
+.input-panel{
+ margin-top: 4vw;
+ display: block;
+ margin-bottom: 4vw;
+}
+.vertical-align-wrap {
+ position: absolute;
+ width:100%;
+ position: fixed;
+ bottom: 0;
+ height:8%;
+ width: 100%;
+ display: table;
+}
+
+.panel-hide{
+ font-size:4vw;
+ font-weight: 500;
+ padding-top: 1vw;
+ padding-bottom: 2vw;
+}
+
+.btn-panel{
+ margin: 2vw;
+ display: block;
+ /* padding-top:1vw;*/
+ text-align: center;
+}
+
+.hide-signup
+{
+ display: none;
+}
+
+.user-type-panel{
+ display: inline-block;
+ height:45%;
+ width: 80%;
+ background-color: white;
+ color: #ff9933;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+.user-type{
+
+ 
+}
+/*
+----------------------------
+Input
+----------------------------
+*/
+input{
+ margin-top:2vw; 
+ width:80%;
+ padding: 3vw;
+ border: 1px solid;
+ border-color:  #ff9933;
+ border-radius: 2vw;
+ font-family:encode;
+ color:#ffbf80;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+/*
+----------------------------
+P/Text
+----------------------------
+*/
+p{
+ display: inline-block;
+}
+.text
+{
+ display: block;
+ text-transform: capitalize;
+}
+
+
+/*
+----------------------------
+Placeholders
+----------------------------
+*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+ color:  #ffbf80;
+ font-size:3vw;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ font-size:3vw;
+ color:   #ffbf80;
+ opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ font-size:3vw;
+ color:    #ffbf80;
+ opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ font-size:3vw;
+ color:    #ffbf80;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ font-size:3vw;
+ color:    #ffbf80;
+}

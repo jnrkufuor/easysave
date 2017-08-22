@@ -1,79 +1,66 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-    <title>Easy Save Login Page</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>EasySave</title>
 		<meta name="format-detection" content="telephone=no">
 		<meta name="msapplication-tap-highlight" content="no">
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="stylesheet" href="sites/uikit/css/uikit.min.css" />
+		<link rel="stylesheet" href="sites/css/easysave.css" />
+		<link rel="stylesheet" href="sites/libraries/font_awesome/css/font-awesome.min.css">
+	</head>
+	<body>
 
-</style>
+		<div class="login-panel">
+			<div class="panel-hide">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+			<div class="input-panel">
+				<input type="text" placeholder="USERNAME">
+				<input type="password" placeholder="PASSWORD">
+			</div>
+			<div class="btn-panel">
+				<span class="login-btn">Login</span>
+				<span class="signup-btn">Sign Up</span>
+				<Span class="text">Forgot Password?</Span>
+			</div>
+		</div>
 
-   <script>
-var userAgent = navigator.userAgent + '';
-if (userAgent.indexOf('iPhone') > -1) {
-  document.write('<script src="scripts/cordova-iphone.js"></sc' + 'ript>');
-  var mobile_system = 'iphone';
-} else if (userAgent.indexOf('Android') > -1) {
-  document.write('<script src="scripts/cordova-android.js"></sc' + 'ript>');
-  var mobile_system = 'android';
-} else {
-  var mobile_system = '';
-}
-</script>
-
-<body style="background-color:#9e9e9e">
-<title> Login Page</title>
-<div style="text-align:center;">
-
-<h1> Login Page </h1>
-</div>
-<div id="divStatus">
-	.
-</div>
-<div style="text-align:center">
-	<input id="username" placeholder="email address"/>
-	<br>
-	<input type="password" id="password" placeholder="password"/>
-	<br>
-	<button type="submit"  onclick="Login()">Login </button>
-	<br>
-	<p> Don't have an account? <href="">Sign Up </a>  </b></p>
-</div>
-
-<script>
-function LoginComplete(xhr,status){
-	if(status!="success"){
-
-		$('#divStatus').html("Log in Error");
-		return;
-	}
-
-	var obj=$.parseJSON(xhr.responseText);
+		<div class="signup-panel">
+			<div class="signup-panel-hide">
+				<i class="sign-fa fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+			<div class="user-type-panel">
+				<p>Sign Up</p>
+				<span> Do you want to sign up as a customer or an agent? Please Select below</span>
+				<span class="user-type"> </span>
+			</div>
+			<div class="hide-signup">
+				<div class="input-panel">
+					<input type="text" placeholder="USERNAME">
+					<input type="text" placeholder="USERNAME">
+					<input type="text" placeholder="USERNAME">
+					<input type="text" placeholder="USERNAME">
+					<input type="text" placeholder="USERNAME">
+					<input type="password" placeholder="PASSWORD">
+				</div>
+				<div class="btn-panel">
+					<span class="signup-btn">Sign Up</span>
+				</div>
+			</div>
+		</div>
 
 
-		if(obj.result!=0){
-			window.location.href="Pages/dashboard.html";
-}
-else{
-		$('#divStatus').html("Log in Error");
-}
-}
+		<div class="vertical-align-wrap">
+			<div class="login-pop">Login</div>
+		</div>
+		<!--		<script src="https://use.fontawesome.com/e71a2dc69d.js"></script>-->
+		<script type="text/javascript" src="sites/libraries/jquery.js"></script>
+		<script type="text/javascript" src="scripts/css.js"></script>
+		<script src="sites/uikit/js/uikit.min.js"></script>
 
-function Login(){
-	console.log('hi');
-var user=$('#username').val();
-
-var password=$('#password').val();
-var ajaxPageUrl="Ajax/usrajax.php?cmd=1&username="+user+"&password="+password;
-$.ajax(ajaxPageUrl,
-	{async:true,complete:LoginComplete	}
-);
-
-}
-</script>
-
-<script type="text/javascript" src="scripts/jquery.js"></script>
-</body>
-
+	</body>
 </html>
