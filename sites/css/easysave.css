@@ -55,9 +55,9 @@ Buttons
 }
 
 
-.login-btn, .signup-btn{
+.login-btn, .signup-btn,.signpanel-btn, .number-btn{
  vertical-align: middle;
- font-size:4vw;
+ font-size:3.5vw;
  display:inline-block;
  line-height: normal;
  font-weight: 500;
@@ -66,23 +66,31 @@ Buttons
  text-align: center;
  padding: 3vw;
  margin-top:1vw;
-
  border: 1px solid;
  border-width: 0;
  outline: none;
  border-color: white;
  border-radius: 2vw;
  text-align:center;
- width: 35%;
- box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+ width: 20vw;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
 }
 
-.signup-btn{
+.signpanel-btn,.back, .code-back {
  color :#ff9933!important;
  background-color:white; 
 }
 
+.btn
+{
+ cursor: pointer;
+ transition: background-color .3s;
+}
 
+
+.btn:focus {
+ opacity: 0.85;
+}
 /*
 ----------------------------
 Divs/ Panels
@@ -103,17 +111,45 @@ Divs/ Panels
  text-align: center;
 }
 
+.verification-form,.code-form{
+display:none;
+width: 100%;
+}
 .logo
 {
  text-align: center;
- 
+
+}
+
+.container {
+ padding-right: 15px;
+ padding-left: 15px;
+ margin-right: auto;
+ margin-left: auto;
+
+ padding-bottom: 15px;
+}
+@media (min-width: 768px) {
+ .container {
+  width: 750px;
+ }
+}
+@media (min-width: 992px) {
+ .container {
+  width: 970px;
+ }
+}
+@media (min-width: 1200px) {
+ .container {
+  width: 1170px;
+ }
 }
 .signup-panel{
  background-color:  #ff9933;
  width:100%;
  height:90%;
  display: none;
- line-height: 55px;
+ line-height: 40px;
  font-weight: 500;
  position: fixed;
  bottom: 0;
@@ -125,6 +161,7 @@ Divs/ Panels
 .input-panel{
  margin-top: 4vw;
  display: block;
+  font-size: 0;
  margin-bottom: 4vw;
 }
 .vertical-align-wrap {
@@ -147,7 +184,6 @@ Divs/ Panels
 .btn-panel{
  margin: 2vw;
  display: block;
- /* padding-top:1vw;*/
  text-align: center;
 }
 
@@ -158,8 +194,9 @@ Divs/ Panels
 
 .user-type-panel{
  display: none;
- height:50%;
- width: 80%;
+ min-height:80vw;
+ clear: both;
+ width: 48vh;
  background-color: white;
  color: #ff9933;
  line-height: 20px;
@@ -172,9 +209,10 @@ Divs/ Panels
 }
 
 .img-holder{
+
  display: inline-block;
- height: 35%;
- width: 35%;
+ height: 25vw;
+ width: 25vw;
  margin-top: 2vw;
  padding: 4vw;
  opacity: 0.8;
@@ -187,6 +225,19 @@ Input
 input{
  margin-top:2vw; 
  width:80%;
+ 
+ padding: 3vw;
+ border: 1px solid;
+ border-color:  #ff9933;
+ border-radius: 2vw;
+ font-family:encode;
+ color:#ffbf80;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+select{
+ margin-top:2vw; 
+ width:87%;
  font-size: 3.5vw;
  padding: 3vw;
  border: 1px solid;
@@ -197,6 +248,17 @@ input{
  box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
 }
 
+.verification_number
+{
+  padding: 3vw;
+ width:50%!important;
+ border-radius: 0;
+  border:0.04px solid;
+ border-bottom-right-radius: 2vw;
+ border-top-right-radius: 2vw;
+ 
+
+}
 /*
 ----------------------------
 P/Text
@@ -209,18 +271,43 @@ p{
 {
  display: block;
  text-transform: capitalize;
+ font-size:3.5vw;
+ margin-bottom: 0;
 }
 
 .subtext{
  color: grey;
- display: block;
+ display: inline-block;
  text-transform: capitalize;
- padding: 3vw;
+ padding: 2vw;
 }
 .s-text{
  margin-top: 4vw;
 }
 
+.module{
+ display: inline;
+ background: #ff9933;
+ color: white;
+ padding: 3vw;
+ font-size: 3.5vw;
+ width:10.5vw;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+}
+
+.icon{
+ border-bottom-left-radius: 2vw;
+ border-top-left-radius: 2vw;
+ border:0.2px solid;
+ border-color:#ff9933;
+ border-left-color:  #ff9933;
+}
+
+.code{
+ border:0.2px solid;
+ border-color:#ff9933;
+ border-right-color: #ff9933;
+}
 /*
 ----------------------------
 Placeholders
@@ -229,22 +316,26 @@ Placeholders
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
  color:  #ffbf80;
  font-size:3.5vw;
+ opacity:  0.8;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
  font-size:3.5vw;
  color:   #ffbf80;
- opacity:  1;
+ opacity:  0.8;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
  font-size:3.5vw;
  color:    #ffbf80;
- opacity:  1;
+ opacity:  0.8;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
  font-size:3.5vw;
  color:    #ffbf80;
+ opacity:  0.8;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
  font-size:3.5vw;
  color:    #ffbf80;
+ opacity:  0.8;
 }
+
