@@ -88,10 +88,10 @@ iqwerty.toast = (function() {
 	Toast.prototype.DEFAULT_SETTINGS = {
 		style: {
 			main: {
-				'background': 'rgba(0, 0, 0, .85)',
-				'box-shadow': '0 0 10px rgba(0, 0, 0, .8)',
+				'background': 'rgba(30, 30, 50, .8)',
+				'box-shadow': '0 0 10px rgba(0, 0, 0, .3)',
 
-				'border-radius': '15px',
+				'border-radius': '6.5vw',
 
 				'z-index': '99999',
 

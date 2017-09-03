@@ -26,7 +26,11 @@ Animation
 Body 
 ----------------------------
 */
-html
+
+html{
+ font-family: encode!important;
+}
+.main
 {
  background: url(../images/01.png) no-repeat center center fixed;
  -webkit-background-size: cover;
@@ -34,6 +38,7 @@ html
  -o-background-size: cover;
  background-size: cover;
  font-family: encode!important;
+ height: 100vh;
 }
 
 
@@ -96,6 +101,22 @@ Buttons
 Divs/ Panels
 ----------------------------
 */
+.header{
+ width: 100%;
+ text-align: center;
+ margin-bottom: 17vw;
+/* position: fixed;*/
+}
+
+.transactions{
+ 
+}
+.header-balance{
+ display: block;
+ font-size: 10vw;
+ color: white;
+ opacity: 0.8;
+}
 
 .login-panel{
  background-color:  #ff9933;
@@ -112,15 +133,20 @@ Divs/ Panels
 }
 
 .verification-form,.code-form{
-display:none;
-width: 100%;
+ display:none;
+ width: 100%;
 }
 .logo
 {
  text-align: center;
-
 }
 
+.info-block{
+ margin-bottom: 4vw;
+}
+.icon-div{
+ text-align: center;
+}
 .container {
  padding-right: 15px;
  padding-left: 15px;
@@ -161,7 +187,7 @@ width: 100%;
 .input-panel{
  margin-top: 4vw;
  display: block;
-  font-size: 0;
+ font-size: 0;
  margin-bottom: 4vw;
 }
 .vertical-align-wrap {
@@ -219,13 +245,28 @@ width: 100%;
 }
 /*
 ----------------------------
+Image
+----------------------------
+*/
+
+.dash-image{
+ margin: 0 auto;
+ width: 100%;
+ margin: 0 auto;
+ top:0;
+ left:0;
+ height: 59vh!important;
+ z-index: -1;
+ position: absolute;
+}
+/*
+----------------------------
 Input
 ----------------------------
 */
 input{
  margin-top:2vw; 
  width:80%;
- 
  padding: 3vw;
  border: 1px solid;
  border-color:  #ff9933;
@@ -250,13 +291,13 @@ select{
 
 .verification_number
 {
-  padding: 3vw;
+ padding: 3vw;
  width:50%!important;
  border-radius: 0;
-  border:0.04px solid;
+ border:0.04px solid;
  border-bottom-right-radius: 2vw;
  border-top-right-radius: 2vw;
- 
+
 
 }
 /*
@@ -264,6 +305,67 @@ select{
 P/Text
 ----------------------------
 */
+.info,.amount-balance{
+ display: block;
+ color: white;
+ opacity: 0.8;
+}
+.stroke{
+ margin:0 auto;
+ margin-top: 10px;
+ width: 80%;
+ border: 0.09px solid;
+ border-color: gainsboro;
+}
+.time{
+ float:right;
+ text-align: right;
+ margin-top: 2vw;
+}
+.deposit-icon,.transfer-icon{
+ text-transform: uppercase;
+ font-size:3vw!important;
+ float: right;
+ border:1px solid;
+ padding: 1vw;
+ line-height: 10px;
+ margin-top: 2vw;
+ color: limegreen;
+ border-color:limegreen;
+ padding-left: 2vw;
+ padding-right: 2vw;
+ border-radius: 5vw;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .007);
+}
+
+.transfer-icon{
+ color: darkorange;
+ border-color:darkorange;
+}
+.reference-id{
+ font-size:2.8vw!important; 
+}
+.small-text{
+ font-size:3vw!important; 
+}
+
+.block{
+ display: block;
+ font-size:6vw!important; 
+ margin-top: 7px;
+ margin-bottom: 7px;
+}
+.info-down{
+ display: inline-block;
+ margin-top: 3vw;
+ width: 8%;
+ background: black;
+ padding: 2.2vw;
+ border-radius: 50%;
+ color: #ff9933;
+ background: white;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
 p{
  display: inline-block;
 }
@@ -295,6 +397,11 @@ p{
  box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
 }
 
+.info
+{
+ display: inline-block;
+ font-size: 4vw;
+}
 .icon{
  border-bottom-left-radius: 2vw;
  border-top-left-radius: 2vw;
@@ -307,6 +414,65 @@ p{
  border:0.2px solid;
  border-color:#ff9933;
  border-right-color: #ff9933;
+}
+
+.header-icons{
+ position: relative;
+ display: block;
+ height: 10%;
+
+ text-decoration: none;
+ font-size: 6vw;
+}
+.header-icons a{
+ color: white!important;
+ float:left;
+ padding: 3vw;
+ margin-left:2vw;
+ opacity: 0.8;
+}
+
+.alt{
+ float:right!important;
+ margin-right:2vw;
+}
+
+/*
+----------------------------
+Navbar
+----------------------------
+*/
+.icon-bar {
+ position: fixed;
+ bottom:0;
+ text-align: center;
+ width: 100%; /* Full-width */
+ background-color: white; /* Dark-grey background */
+ overflow: auto; /* Overflow due to float */
+ border:1px solid;
+ border-color: white;
+ border-top-color: gainsboro;
+}
+
+.icon-bar a {
+ text-align: center; /* Center-align text */
+ width: 30%; /* Equal width (5 icons with 20% width each = 100%)
+ padding: 12px 0;  Some top and bottom padding */
+ display: inline-block;
+ transition: all 0.3s ease; /* Add transition for hover effects */
+ color: darkgrey; /* White text color */
+ font-size: 6.5vw; /* Increased font size */
+
+ padding-bottom: 1vw;
+}
+
+.icon-bar a:hover {
+ color: #ff9933; /* Add a hover color */
+ text-decoration: none;
+}
+
+.active {
+ color: #ff9933; /* Add an active/current color */
 }
 /*
 ----------------------------
