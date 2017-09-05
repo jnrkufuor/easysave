@@ -60,7 +60,7 @@ Buttons
 }
 
 
-.login-btn, .signup-btn,.signpanel-btn, .number-btn{
+.login-btn, .signup-btn,.signpanel-btn, .number-btn,.cashout-btn,.qr-btn{
  vertical-align: middle;
  font-size:3.5vw;
  display:inline-block;
@@ -81,9 +81,26 @@ Buttons
  box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+ outline: none;
+}
 .signpanel-btn,.back, .code-back {
  color :#ff9933!important;
  background-color:white; 
+}
+
+.cashout-btn,.qr-btn{
+ margin-top: 6vw;
+ margin-bottom: 6vw;
+ background-color: #ff9933!important;
+ color:white;
+}
+
+.qr-btn{
+  width: 30vw;
 }
 
 .btn
@@ -101,21 +118,139 @@ Buttons
 Divs/ Panels
 ----------------------------
 */
+.account,.settings-block{
+ padding: 2vw;
+ background-color: white;
+ margin-bottom: 2vw;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+
+.settings-block{
+ padding: 1.5vw;
+ none;
+}
+.bar
+{
+ background-color:  #ff9933;
+ display: block;
+ height: 8.5vh;
+ text-align: center;
+ color: white;
+}
+
 .header{
  width: 100%;
  text-align: center;
  margin-bottom: 17vw;
-/* position: fixed;*/
+ position: fixed;
+ z-index: 9999;
+ top:0;
+ left:0;
 }
 
+.modal-content{
+ color:dimgrey;
+}
+.cashout-text-div{
+ text-align: center;
+ padding:2.5vw;
+ mrgin:2vw;
+}
+
+.cashout,.settings{
+ top:0;
+ display: none;
+ background-color:ghostwhite;
+ width:100%;
+ font-family: encode!important;
+ height: 100vh;
+}
+
+.space{
+ width: 100%;
+ min-height:3vw; 
+ clear:both;
+}
+.header-temp{
+ width: 100%;
+ min-height:63vw; 
+ clear:both;
+}
 .transactions{
- 
+
 }
 .header-balance{
+ text-align: center;
  display: block;
  font-size: 10vw;
  color: white;
- opacity: 0.8;
+}
+
+.cover,.info-cover{
+ display: none;
+ width:100%;
+ background: url(../images/blur.png) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ font-family: encode!important;
+ height: 100vh;
+ z-index: 100000;
+ position: fixed;
+ overflow:hidden;
+ top:0;
+ left:0;
+ text-align: center;
+
+}
+
+.modal-div,.info-modal-div{
+ display: none;
+ width:100%;
+ font-family: encode!important;
+ height: 100vh;
+ z-index: 1000000;
+ position: fixed;
+ top:0;
+ left:0;
+ text-align: center;
+ color:white;
+}
+
+.modal,.info-modal{
+ display: none;
+ min-height: 35vh;
+ margin: 0 auto;
+ border-radius:3vw;
+ width:65%;
+ background-color: white;
+ font-family: encode!important;
+ text-align: center;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+}
+
+.info-modal{
+ color:dimgrey;
+ width:90%;
+ min-height: 45vh;
+ clear: both;
+ margin-top: 15vw;
+}
+
+.info-modal .ti-close{
+ display: inline-block;
+ float: left;
+ padding: 3vw;
+ font-weight: bolder;
+}
+
+.info-modal .modal-info, .info-modal-info{
+ margin:0 auto;
+}
+.modal-header{
+ bo
+ border-bottom-color:gainsboro;
 }
 
 .login-panel{
@@ -258,6 +393,7 @@ Image
  height: 59vh!important;
  z-index: -1;
  position: absolute;
+
 }
 /*
 ----------------------------
@@ -305,11 +441,65 @@ select{
 P/Text
 ----------------------------
 */
-.info,.amount-balance{
+.account-number{
  display: block;
- color: white;
- opacity: 0.8;
+ font-size: 5vw;
+ float: left;
 }
+
+.cashout-text,.settings-text{
+ display: block;
+ font-size:4.5vw;
+ padding:4vw;
+ width: 50vw;
+ margin: 0 auto;
+}
+
+.settings-text{
+ margin:0;
+}
+
+.cashout-info{
+ display: block;
+ font-size:4.5vw;
+}
+
+.cashout-subinfo{
+ display: block;
+ font-size:3vw;
+}
+.modal-close{
+ margin:0 auto;
+ margin-top:12vw;
+ width:4.5%;
+ padding: 1vw;
+ display: block;
+ font-weight: bolder;
+ border:2px solid;
+ font-size:3vw;
+ border-color:white;
+ border-radius: 50%;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+
+.modal-info,.info-modal-info{
+ margin:0 auto;
+ display: block;
+ font-size:3.4vw;
+ padding: 4vw;
+}  
+
+.ti-image{
+ font-size: 3vw!important;
+}
+.info,.amount-balance{
+ /* display: block;*/
+ margin: 0 auto;
+ text-align: center;
+ color: white;
+}
+
+
 .stroke{
  margin:0 auto;
  margin-top: 10px;
@@ -317,6 +507,7 @@ P/Text
  border: 0.09px solid;
  border-color: gainsboro;
 }
+
 .time{
  float:right;
  text-align: right;
@@ -337,7 +528,10 @@ P/Text
  border-radius: 5vw;
  box-shadow: 0 1px 4px rgba(0, 0, 0, .007);
 }
-
+.line{
+ border: 0.2px solid;
+ border-color:gainsboro;
+}
 .transfer-icon{
  color: darkorange;
  border-color:darkorange;
@@ -355,6 +549,8 @@ P/Text
  margin-top: 7px;
  margin-bottom: 7px;
 }
+
+
 .info-down{
  display: inline-block;
  margin-top: 3vw;
@@ -429,7 +625,6 @@ p{
  float:left;
  padding: 3vw;
  margin-left:2vw;
- opacity: 0.8;
 }
 
 .alt{
@@ -449,20 +644,17 @@ Navbar
  width: 100%; /* Full-width */
  background-color: white; /* Dark-grey background */
  overflow: auto; /* Overflow due to float */
- border:1px solid;
- border-color: white;
- border-top-color: gainsboro;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, .8);
 }
 
 .icon-bar a {
  text-align: center; /* Center-align text */
- width: 30%; /* Equal width (5 icons with 20% width each = 100%)
- padding: 12px 0;  Some top and bottom padding */
+ width: 30%; /* Equal width (5 icons with 20% width each = 100%) */
+ padding: 1vw 0;  
  display: inline-block;
  transition: all 0.3s ease; /* Add transition for hover effects */
  color: darkgrey; /* White text color */
- font-size: 6.5vw; /* Increased font size */
-
+ font-size: 7vw; /* Increased font size */
  padding-bottom: 1vw;
 }
 
